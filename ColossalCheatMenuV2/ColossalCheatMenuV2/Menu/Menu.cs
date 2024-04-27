@@ -261,7 +261,7 @@ namespace Colossal.Menu {
                     Speed[2] = new MenuOption { DisplayName = "Speed (RG)", _type = "STRINGslider", StringArray = new string[] { "Off", "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
                     Speed[3] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
 
-                    Visual = new MenuOption[10];
+                    Visual = new MenuOption[12];
                     Visual[0] = new MenuOption { DisplayName = "Chams", _type = "toggle", AssociatedBool = false };
                     Visual[1] = new MenuOption { DisplayName = "BoxESP", _type = "toggle", AssociatedBool = false };
                     Visual[2] = new MenuOption { DisplayName = "HollowBoxESP", _type = "toggle", AssociatedBool = false };
@@ -271,7 +271,9 @@ namespace Colossal.Menu {
                     Visual[6] = new MenuOption { DisplayName = "Tracers", _type = "toggle", AssociatedBool = false };
                     Visual[7] = new MenuOption { DisplayName = "BoneESP", _type = "toggle", AssociatedBool = false };
                     Visual[8] = new MenuOption { DisplayName = "First Person Cam", _type = "toggle", AssociatedBool = false };
-                    Visual[9] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+                    Visual[9] = new MenuOption { DisplayName = "Day Time", _type = "button", AssociatedString = "daytime" };
+                    Visual[10] = new MenuOption { DisplayName = "Night Time", _type = "button", AssociatedString = "nighttime" };
+                    Visual[11] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
 
                     Player = new MenuOption[11];
                     Player[0] = new MenuOption { DisplayName = "NoFinger", _type = "toggle", AssociatedBool = false };
@@ -783,6 +785,14 @@ namespace Colossal.Menu {
                         if (option.AssociatedString == "moddedinfection")
                         {
                             GorillaComputer.instance.currentGameMode.Value = "MODDED_MODDED_DEFAULTINFECTION";
+                        }
+                        if (option.AssociatedString == "daytime")
+                        {
+                            BetterDayNightManager.instance.SetTimeOfDay(1);
+                        }
+                        if (option.AssociatedString == "nighttime")
+                        {
+                            BetterDayNightManager.instance.SetTimeOfDay(0);
                         }
 
                         //Account
