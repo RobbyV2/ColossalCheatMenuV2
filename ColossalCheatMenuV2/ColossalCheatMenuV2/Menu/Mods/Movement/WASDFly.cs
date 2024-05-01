@@ -21,7 +21,7 @@ namespace Colossal.Mods
         {
             if (PluginConfig.WASDFly)
             {
-                switch (Menu.Menu.MiscSettings[0].stringsliderind)
+                switch (PluginConfig.WASDFlySpeed)
                 {
                     case 0:
                         flyspeed = 5;

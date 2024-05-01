@@ -19,7 +19,7 @@ namespace Colossal.Mods
         {
             if (PluginConfig.FloatyMonkey)
             {
-                switch (Menu.Menu.MiscSettings[1].stringsliderind)
+                switch (PluginConfig.FloatMonkeyAmmount)
                 {
                     case 0:
                         ammount = 1.1f;

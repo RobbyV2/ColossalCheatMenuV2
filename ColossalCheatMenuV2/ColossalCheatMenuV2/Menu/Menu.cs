@@ -74,7 +74,10 @@ namespace Colossal.Menu {
         public static MenuOption[] Sky;
 
         public static MenuOption[] ColourSettings;
-        public static MenuOption[] MiscSettings;
+        public static MenuOption[] ModSettings;
+        public static MenuOption[] MovementSettings;
+        public static MenuOption[] VisualSettings;
+        public static MenuOption[] PlayerSettings;
 
 
         public static bool inputcooldown = false;
@@ -230,12 +233,12 @@ namespace Colossal.Menu {
                     MainMenu[4] = new MenuOption { DisplayName = "Modders", _type = "submenu", AssociatedString = "Modders" };
                     MainMenu[5] = new MenuOption { DisplayName = "Account", _type = "submenu", AssociatedString = "Account" };
                     MainMenu[6] = new MenuOption { DisplayName = "Settings", _type = "submenu", AssociatedString = "Settings" };
-                    MainMenu[7] = new MenuOption { DisplayName = "DriftMode", _type = "toggle", AssociatedBool = true };
                     //MainMenu[8] = new MenuOption { DisplayName = "AntiCrash", _type = "toggle", AssociatedBool = true };
-                    MainMenu[8] = new MenuOption { DisplayName = "Notifacations", _type = "toggle", AssociatedBool = true };
-                    MainMenu[9] = new MenuOption { DisplayName = "Overlay", _type = "toggle", AssociatedBool = true };
-                    MainMenu[10] = new MenuOption { DisplayName = "CS Visuals", _type = "toggle", AssociatedBool = true };
-                    MainMenu[11] = new MenuOption { DisplayName = "Tool Tips", _type = "toggle", AssociatedBool = true };
+                    MainMenu[7] = new MenuOption { DisplayName = "Notifacations", _type = "toggle", AssociatedBool = true };
+                    MainMenu[8] = new MenuOption { DisplayName = "Overlay", _type = "toggle", AssociatedBool = true };
+                    MainMenu[9] = new MenuOption { DisplayName = "CS Visuals", _type = "toggle", AssociatedBool = true };
+                    MainMenu[10] = new MenuOption { DisplayName = "Tool Tips", _type = "toggle", AssociatedBool = true };
+                    MainMenu[11] = new MenuOption { DisplayName = "Show Startup", _type = "toggle", AssociatedBool = true };
 
                     Movement = new MenuOption[12];
                     Movement[0] = new MenuOption { DisplayName = "ExcelFly", _type = "toggle", AssociatedBool = false };
@@ -250,16 +253,18 @@ namespace Colossal.Menu {
                     Movement[9] = new MenuOption { DisplayName = "WASD Fly", _type = "toggle", AssociatedBool = false };
                     Movement[10] = new MenuOption { DisplayName = "Next ->", _type = "submenu", AssociatedString = "Movement2" };
                     Movement[11] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
-                    Movement2 = new MenuOption[4];
+                    Movement2 = new MenuOption[5];
                     Movement2[0] = new MenuOption { DisplayName = "Timer", _type = "toggle", AssociatedBool = false };
                     Movement2[1] = new MenuOption { DisplayName = "FloatyMonkey", _type = "toggle", AssociatedBool = false };
                     Movement2[2] = new MenuOption { DisplayName = "Climbable Gorillas", _type = "toggle", AssociatedBool = false };
-                    Movement2[3] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
-                    Speed = new MenuOption[4];
-                    Speed[0] = new MenuOption { DisplayName = "Speed", _type = "STRINGslider", StringArray = new string[] { "Off", "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } }; //quick "Fix" but apperantly anything above was detected... -Lars
-                    Speed[1] = new MenuOption { DisplayName = "Speed (LG)", _type = "STRINGslider", StringArray = new string[] { "Off", "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
-                    Speed[2] = new MenuOption { DisplayName = "Speed (RG)", _type = "STRINGslider", StringArray = new string[] { "Off", "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
-                    Speed[3] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+                    Movement2[3] = new MenuOption { DisplayName = "Near Pulse", _type = "toggle", AssociatedBool = false };
+                    Movement2[4] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+                    Speed = new MenuOption[5];
+                    Speed[0] = new MenuOption { DisplayName = "Speed", _type = "toggle", AssociatedBool = false };
+                    Speed[1] = new MenuOption { DisplayName = "Speed (LG)", _type = "toggle", AssociatedBool = false };
+                    Speed[2] = new MenuOption { DisplayName = "Speed (RG)", _type = "toggle", AssociatedBool = false };
+                    Speed[3] = new MenuOption { DisplayName = "Near Speed", _type = "toggle", AssociatedBool = false };
+                    Speed[4] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
 
                     Visual = new MenuOption[12];
                     Visual[0] = new MenuOption { DisplayName = "Chams", _type = "toggle", AssociatedBool = false };
@@ -275,7 +280,7 @@ namespace Colossal.Menu {
                     Visual[10] = new MenuOption { DisplayName = "Night Time", _type = "button", AssociatedString = "nighttime" };
                     Visual[11] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
 
-                    Player = new MenuOption[11];
+                    Player = new MenuOption[12];
                     Player[0] = new MenuOption { DisplayName = "NoFinger", _type = "toggle", AssociatedBool = false };
                     Player[1] = new MenuOption { DisplayName = "TagGun", _type = "toggle", AssociatedBool = false };
                     Player[2] = new MenuOption { DisplayName = "[BROKEN] LegMod", _type = "toggle", AssociatedBool = false };
@@ -286,7 +291,8 @@ namespace Colossal.Menu {
                     Player[7] = new MenuOption { DisplayName = "TagAll", _type = "toggle", AssociatedBool = false };
                     Player[8] = new MenuOption { DisplayName = "[BROKEN] FreezeMonke", _type = "toggle", AssociatedBool = false };
                     Player[9] = new MenuOption { DisplayName = "Desync", _type = "toggle", AssociatedBool = false };
-                    Player[10] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+                    Player[10] = new MenuOption { DisplayName = "HitBoxes", _type = "toggle", AssociatedBool = false };
+                    Player[11] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
 
                     Modders = new MenuOption[5];
                     Modders[0] = new MenuOption { DisplayName = "Break NameTags", _type = "toggle", AssociatedBool = false };
@@ -314,12 +320,13 @@ namespace Colossal.Menu {
 
                     Settings = new MenuOption[7];
                     Settings[0] = new MenuOption { DisplayName = "Colour Settings", _type = "submenu", AssociatedString = "ColourSettings" };
-                    Settings[1] = new MenuOption { DisplayName = "Mod Settings", _type = "submenu", AssociatedString = "MiscSettings" };
+                    Settings[1] = new MenuOption { DisplayName = "Mod Settings", _type = "submenu", AssociatedString = "ModSettings" };
                     Settings[2] = new MenuOption { DisplayName = "MenuPosition", _type = "STRINGslider", StringArray = new string[] { "Top Right", "Middle" } };
                     Settings[3] = new MenuOption { DisplayName = "Config", _type = "STRINGslider", StringArray = Configs.GetConfigFileNames() };
                     Settings[4] = new MenuOption { DisplayName = "Load Config", _type = "button", AssociatedString = "loadconfig" };
                     Settings[5] = new MenuOption { DisplayName = "Save Config", _type = "button", AssociatedString = "saveconfig" };
                     Settings[6] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
                     ColourSettings = new MenuOption[6];
                     ColourSettings[0] = new MenuOption { DisplayName = "MenuColour", _type = "STRINGslider", StringArray = new string[] { "Purple", "Red", "Yellow", "Green", "Blue", "RGB" } };
                     ColourSettings[1] = new MenuOption { DisplayName = "Ghost Colour", _type = "STRINGslider", StringArray = new string[] { "Purple", "Red", "Yellow", "Green", "Blue" } };
@@ -327,17 +334,39 @@ namespace Colossal.Menu {
                     ColourSettings[3] = new MenuOption { DisplayName = "ESP Colour", _type = "STRINGslider", StringArray = new string[] { "Purple", "Red", "Yellow", "Green", "Blue" } };
                     ColourSettings[4] = new MenuOption { DisplayName = "Ghost Opacity", _type = "STRINGslider", StringArray = new string[] { "100%", "80%", "60%", "30%", "20%", "0%" } };
                     ColourSettings[5] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
-                    MiscSettings = new MenuOption[10];
-                    MiscSettings[0] = new MenuOption { DisplayName = "WASD Fly Speed", _type = "STRINGslider", StringArray = new string[] { "5", "7", "10", "13", "16" } };
-                    MiscSettings[1] = new MenuOption { DisplayName = "FloatMonkey Ammount", _type = "STRINGslider", StringArray = new string[] { "1.1", "1.2", "1.4", "1.6", "1.8", "2", "2.2", "2.4", "2.6", "2.8", "3", "3.2", "3.4", "3.6", "3.8", "4", "Anti Grav" } };
-                    MiscSettings[2] = new MenuOption { DisplayName = "TagAura Ammount", _type = "STRINGslider", StringArray = new string[] { "Really Close", "Close", "Legit", "Semi Legit", "Semi Blatant", "Blatant", "Rage" } };
-                    MiscSettings[3] = new MenuOption { DisplayName = "WallWalk Ammount", _type = "STRINGslider", StringArray = new string[] { "6.8", "7", "7.5", "7.8", "8", "8.5", "8.8", "9", "9.5", "9.8" } };
-                    MiscSettings[4] = new MenuOption { DisplayName = "Timer Speed", _type = "STRINGslider", StringArray = new string[] { "1.03x", "1.06x", "1.09x", "1.1x", "1.13x", "1.16x", "1.19x", "1.2x", "1.23x", "1.26", "1.29", "1.3x", "2x", "3x", "4x", "5x" } };
-                    MiscSettings[5] = new MenuOption { DisplayName = "First Person FOV", _type = "STRINGslider", StringArray = new string[] { "60", "70" ,"80", "90", "100", "110", "120", "130", "140"} };
-                    MiscSettings[6] = new MenuOption { DisplayName = "ExcelFly Speed", _type = "STRINGslider", StringArray = new string[] { "Super Slow", "Slow", "Medium", "Fast", "Super Fast" } };
-                    MiscSettings[7] = new MenuOption { DisplayName = "Tracer Position", _type = "STRINGslider", StringArray = new string[] { "RHand", "LHand", "Head", "Screen" } };
-                    MiscSettings[8] = new MenuOption { DisplayName = "Tracer Size", _type = "STRINGslider", StringArray = new string[] { "Extremely Small", "Super Small", "Small", "Medium", "Large", "Giant", "Huge" } };
-                    MiscSettings[9] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
+                    ModSettings = new MenuOption[4];
+                    ModSettings[0] = new MenuOption { DisplayName = "Movement Settings", _type = "submenu", AssociatedString = "MovementSettings" };
+                    ModSettings[1] = new MenuOption { DisplayName = "Visual Settings", _type = "submenu", AssociatedString = "VisualSettings" };
+                    ModSettings[2] = new MenuOption { DisplayName = "Player Settings", _type = "submenu", AssociatedString = "PlayerSettings" };
+                    ModSettings[3] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
+                    MovementSettings = new MenuOption[12];
+                    MovementSettings[0] = new MenuOption { DisplayName = "WASD Fly Speed", _type = "STRINGslider", StringArray = new string[] { "5", "7", "10", "13", "16" } };
+                    MovementSettings[1] = new MenuOption { DisplayName = "FloatMonkey Ammount", _type = "STRINGslider", StringArray = new string[] { "1.1", "1.2", "1.4", "1.6", "1.8", "2", "2.2", "2.4", "2.6", "2.8", "3", "3.2", "3.4", "3.6", "3.8", "4", "Anti Grav" } };
+                    MovementSettings[2] = new MenuOption { DisplayName = "WallWalk Ammount", _type = "STRINGslider", StringArray = new string[] { "6.8", "7", "7.5", "7.8", "8", "8.5", "8.8", "9", "9.5", "9.8" } };
+                    MovementSettings[3] = new MenuOption { DisplayName = "Timer Speed", _type = "STRINGslider", StringArray = new string[] { "1.03x", "1.06x", "1.09x", "1.1x", "1.13x", "1.16x", "1.19x", "1.2x", "1.23x", "1.26", "1.29", "1.3x", "2x", "3x", "4x", "5x" } };
+                    MovementSettings[4] = new MenuOption { DisplayName = "ExcelFly Speed", _type = "STRINGslider", StringArray = new string[] { "Super Slow", "Slow", "Medium", "Fast", "Super Fast" } };
+                    MovementSettings[5] = new MenuOption { DisplayName = "Speed Ammount", _type = "STRINGslider", StringArray = new string[] { "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } }; //quick "Fix" but apperantly anything above was detected... -Lars
+                    MovementSettings[6] = new MenuOption { DisplayName = "Speed (LG) Ammount", _type = "STRINGslider", StringArray = new string[] { "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
+                    MovementSettings[7] = new MenuOption { DisplayName = "Speed (RG) Ammount", _type = "STRINGslider", StringArray = new string[] { "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
+                    MovementSettings[8] = new MenuOption { DisplayName = "Near Speed Ammount", _type = "STRINGslider", StringArray = new string[] { "7", "7.2", "7.4", "7.6", "7.8", "8", "8.2", "8.4", "8.6" } };//, "8.8", "9", "No Limit" } };
+                    MovementSettings[9] = new MenuOption { DisplayName = "Near Speed Distance", _type = "STRINGslider", StringArray = new string[] { "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25" } };
+                    MovementSettings[10] = new MenuOption { DisplayName = "Near Pulse Distance", _type = "STRINGslider", StringArray = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" } };
+                    MovementSettings[10] = new MenuOption { DisplayName = "Near Pulse Ammount", _type = "STRINGslider", StringArray = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" } };
+                    MovementSettings[11] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
+                    VisualSettings = new MenuOption[4];
+                    VisualSettings[0] = new MenuOption { DisplayName = "First Person FOV", _type = "STRINGslider", StringArray = new string[] { "60", "70", "80", "90", "100", "110", "120", "130", "140" } };
+                    VisualSettings[1] = new MenuOption { DisplayName = "Tracer Position", _type = "STRINGslider", StringArray = new string[] { "RHand", "LHand", "Head", "Screen" } };
+                    VisualSettings[2] = new MenuOption { DisplayName = "Tracer Size", _type = "STRINGslider", StringArray = new string[] { "Extremely Small", "Super Small", "Small", "Medium", "Large", "Giant", "Huge" } };
+                    VisualSettings[3] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
+                    PlayerSettings = new MenuOption[3];
+                    PlayerSettings[0] = new MenuOption { DisplayName = "TagAura Ammount", _type = "STRINGslider", StringArray = new string[] { "Really Close", "Close", "Legit", "Semi Legit", "Semi Blatant", "Blatant", "Rage" } };
+                    PlayerSettings[1] = new MenuOption { DisplayName = "HitBoxes Radius", _type = "STRINGslider", StringArray = new string[] { "Really Close", "Close", "Legit", "Semi Legit", "Semi Blatant", "Blatant", "Rage" } };
+                    PlayerSettings[2] = new MenuOption { DisplayName = "<- Back", _type = "submenu", AssociatedString = "Back" };
+
 
                     MenuState = "Main";
                     CurrentViewingMenu = MainMenu;
@@ -399,6 +428,7 @@ namespace Colossal.Menu {
                     Menu.HUDObj2.transform.rotation = Menu.MainCamera.transform.rotation;
 
 
+                    //KEYBOARD CONTROLS
                     Keyboard current = Keyboard.current;
                     if (current.upArrowKey.wasPressedThisFrame)
                     {
@@ -445,59 +475,9 @@ namespace Colossal.Menu {
                     }
 
 
-
+                    //VR CONTROLS
                     bool rightGrab = ControllerInputPoller.instance.rightGrab;
-
-                    if (!PluginConfig.driftmode)
-                    {
-                        Vector2 rightJoystickAxis = SteamVR_Actions.gorillaTag_RightJoystick2DAxis.GetAxis(SteamVR_Input_Sources.RightHand);
-                        if (rightJoystickAxis.y >= 0.7f && !Menu.inputcooldown)
-                        {
-                            Menu.inputcooldown = true;
-                            if (Menu.SelectedOptionIndex == 0)
-                                Menu.SelectedOptionIndex = Menu.CurrentViewingMenu.Count<MenuOption>() - 1;
-                            else
-                                Menu.SelectedOptionIndex--;
-                            Menu.UpdateMenuState(new MenuOption(), null, null);
-                        }
-                        if (rightJoystickAxis.y >= -0.7f && !Menu.inputcooldown)
-                        {
-                            Menu.inputcooldown = true;
-                            if (Menu.SelectedOptionIndex + 1 == Menu.CurrentViewingMenu.Count<MenuOption>())
-                                Menu.SelectedOptionIndex = 0;
-                            else
-                                Menu.SelectedOptionIndex++;
-                            Menu.UpdateMenuState(new MenuOption(), null, null);
-                        }
-                        if (rightJoystickAxis.x >= 0.7f && !Menu.inputcooldown)
-                        {
-                            Menu.inputcooldown = true;
-                            Menu.UpdateMenuState(Menu.CurrentViewingMenu[Menu.SelectedOptionIndex], null, "optionhit");
-                        }
-                        if (CurrentViewingMenu[SelectedOptionIndex]._type == "STRINGslider")
-                        {
-                            if ((rightJoystickAxis.x < -0.7f && !Menu.inputcooldown))
-                            {
-                                if ((CurrentViewingMenu[SelectedOptionIndex].stringsliderind + 1) == CurrentViewingMenu[SelectedOptionIndex].StringArray.Count())
-                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = 0;
-                                else
-                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = CurrentViewingMenu[SelectedOptionIndex].stringsliderind + 1;
-                                Menu.inputcooldown = true;
-                            }
-                            if ((rightJoystickAxis.x > 0.7f && !Menu.inputcooldown))
-                            {
-                                if (CurrentViewingMenu[SelectedOptionIndex].stringsliderind == 0)
-                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = CurrentViewingMenu[SelectedOptionIndex].StringArray.Count() - 1;
-                                else
-                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = CurrentViewingMenu[SelectedOptionIndex].stringsliderind - 1;
-                                Menu.inputcooldown = true;
-                            }
-                            UpdateMenuState(new MenuOption(), null, null);
-                        }
-                        if (rightJoystickAxis.y <= -0.7f && rightJoystickAxis.y <= 0.7f && rightJoystickAxis.x <= 0.7f && Menu.inputcooldown)
-                            Menu.inputcooldown = false;
-                    }
-                    else if (SteamVR_Actions.gorillaTag_LeftJoystickClick.GetState(SteamVR_Input_Sources.LeftHand))
+                    if (SteamVR_Actions.gorillaTag_LeftJoystickClick.GetState(SteamVR_Input_Sources.LeftHand))
                     {
                         bool trigger = SteamVR_Actions.gorillaTag_RightTriggerClick.GetState(SteamVR_Input_Sources.RightHand);
                         if (trigger && !Menu.inputcooldown)
@@ -516,8 +496,8 @@ namespace Colossal.Menu {
                         {
                             if (rightGrab && !Menu.inputcooldown)
                             {
-                                if (CurrentViewingMenu[SelectedOptionIndex].stringsliderind == 0)
-                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = CurrentViewingMenu[SelectedOptionIndex].StringArray.Count() + 1;
+                                if ((CurrentViewingMenu[SelectedOptionIndex].stringsliderind + 1) == CurrentViewingMenu[SelectedOptionIndex].StringArray.Count())
+                                    CurrentViewingMenu[SelectedOptionIndex].stringsliderind = 0;
                                 else
                                     CurrentViewingMenu[SelectedOptionIndex].stringsliderind = CurrentViewingMenu[SelectedOptionIndex].stringsliderind + 1;
                                 Menu.inputcooldown = true;
@@ -531,21 +511,21 @@ namespace Colossal.Menu {
                         }
                     }
                 }
-                //DriftMode
-                PluginConfig.driftmode = MainMenu[7].AssociatedBool;
                 //PluginConfig.anticrash = MainMenu[8].AssociatedBool;
-                PluginConfig.noti = MainMenu[8].AssociatedBool;
-                PluginConfig.overlay = MainMenu[9].AssociatedBool;
-                PluginConfig.csghostclient = MainMenu[10].AssociatedBool;
-                PluginConfig.tooltips = MainMenu[11].AssociatedBool;
+                PluginConfig.noti = MainMenu[7].AssociatedBool;
+                PluginConfig.overlay = MainMenu[8].AssociatedBool;
+                PluginConfig.csghostclient = MainMenu[9].AssociatedBool;
+                PluginConfig.tooltips = MainMenu[10].AssociatedBool;
+                PluginConfig.showstartup = MainMenu[11].AssociatedBool;
 
                 //Movement
                 PluginConfig.excelfly = Movement[0].AssociatedBool;
                 PluginConfig.tfly = Movement[1].AssociatedBool;
                 PluginConfig.wallwalk = Movement[2].AssociatedBool;
-                PluginConfig.speed = Speed[0].stringsliderind;
-                PluginConfig.speedlg = Speed[1].stringsliderind;
-                PluginConfig.speedrg = Speed[2].stringsliderind;
+                PluginConfig.speed = Speed[0].AssociatedBool;
+                PluginConfig.speedlg = Speed[1].AssociatedBool;
+                PluginConfig.speedrg = Speed[2].AssociatedBool;
+                PluginConfig.nearspeed = Speed[3].AssociatedBool;
                 PluginConfig.platforms = Movement[4].AssociatedBool;
                 PluginConfig.upsidedownmonkey = Movement[5].AssociatedBool;
                 PluginConfig.wateryair = Movement[6].AssociatedBool;
@@ -594,15 +574,24 @@ namespace Colossal.Menu {
                 PluginConfig.ESPColour = ColourSettings[3].stringsliderind;
                 PluginConfig.GhostOpacity = ColourSettings[4].stringsliderind;
                 //Misc Settings
-                PluginConfig.WASDFlySpeed = MiscSettings[0].stringsliderind;
-                PluginConfig.FloatMonkeyAmmount = MiscSettings[1].stringsliderind;
-                PluginConfig.TagAuraAmmount = MiscSettings[2].stringsliderind;
-                PluginConfig.WallWalkAmmount = MiscSettings[3].stringsliderind;
-                PluginConfig.TimerSpeed = MiscSettings[4].stringsliderind;
-                PluginConfig.FirstPersonFOV = MiscSettings[5].stringsliderind;
-                PluginConfig.ExcelFlySpeed = MiscSettings[6].stringsliderind;
-                PluginConfig.TracerPosition = MiscSettings[7].stringsliderind;
-                PluginConfig.TracerSize = MiscSettings[8].stringsliderind;
+                PluginConfig.WASDFlySpeed = MovementSettings[0].stringsliderind;
+                PluginConfig.FloatMonkeyAmmount = MovementSettings[1].stringsliderind;
+                PluginConfig.WallWalkAmmount = MovementSettings[2].stringsliderind;
+                PluginConfig.TimerSpeed = MovementSettings[3].stringsliderind;
+                PluginConfig.ExcelFlySpeed = MovementSettings[4].stringsliderind;
+                PluginConfig.speedammount = MovementSettings[5].stringsliderind;
+                PluginConfig.speedlgammount = MovementSettings[6].stringsliderind;
+                PluginConfig.speedrgammount = MovementSettings[7].stringsliderind;
+                PluginConfig.nearspeedmmount = MovementSettings[8].stringsliderind;
+                PluginConfig.nearspeeddistance = MovementSettings[9].stringsliderind;
+                PluginConfig.NearPulseDistance = MovementSettings[10].stringsliderind;
+
+                PluginConfig.FirstPersonFOV = VisualSettings[0].stringsliderind;
+                PluginConfig.TracerPosition = VisualSettings[1].stringsliderind;
+                PluginConfig.TracerSize = VisualSettings[2].stringsliderind;
+
+                PluginConfig.TagAuraAmmount = PlayerSettings[0].stringsliderind;
+                PluginConfig.hitboxesradius = PlayerSettings[1].stringsliderind;
 
 
                 string ToDraw = Plugin.sussy ? $"<color={MenuColour}>SUSSY : {MenuState}</color>\n" : $"<color={MenuColour}>COLOSSAL : {MenuState}</color>\n";
@@ -695,8 +684,14 @@ namespace Colossal.Menu {
 
                         if (option.AssociatedString == "ColourSettings")
                             CurrentViewingMenu = ColourSettings;
-                        if (option.AssociatedString == "MiscSettings")
-                            CurrentViewingMenu = MiscSettings;
+                        if (option.AssociatedString == "ModSettings")
+                            CurrentViewingMenu = ModSettings;
+                        if (option.AssociatedString == "MovementSettings")
+                            CurrentViewingMenu = MovementSettings;
+                        if (option.AssociatedString == "VisualSettings")
+                            CurrentViewingMenu = VisualSettings;
+                        if (option.AssociatedString == "PlayerSettings")
+                            CurrentViewingMenu = PlayerSettings;
 
                         if (option.AssociatedString == "Back")
                             CurrentViewingMenu = MainMenu;

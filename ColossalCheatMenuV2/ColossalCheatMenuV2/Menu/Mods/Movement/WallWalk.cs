@@ -26,7 +26,7 @@ namespace Colossal.Mods
         {
             if(PluginConfig.wallwalk)
             {
-                switch (Menu.Menu.MiscSettings[3].stringsliderind)
+                switch (Menu.Menu.MovementSettings[2].stringsliderind)
                 {
                     case 0:
                         ammount = 6.8f;

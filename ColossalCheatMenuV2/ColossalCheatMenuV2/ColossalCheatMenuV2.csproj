@@ -60,6 +60,7 @@
     <Compile Include="Menu\Mods\Modders\FakeQuestMenu.cs" />
     <Compile Include="Menu\Mods\Modders\PcCheckBypass.cs" />
     <Compile Include="Menu\Mods\Movement\FloatyMonkey.cs" />
+    <Compile Include="Menu\Mods\Movement\NearPulse.cs" />
     <Compile Include="Menu\Mods\Movement\SpinBot.cs" />
     <Compile Include="Menu\Mods\Movement\ClimbableGorillas.cs" />
     <Compile Include="Menu\Mods\Movement\Timer.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Menu\Mods\Modders\BreakModCheckers.cs" />
     <Compile Include="Menu\Mods\Modders\BreakNameTags.cs" />
     <Compile Include="Menu\Mods\Movement\WateryAir.cs" />
+    <Compile Include="Menu\Mods\Player\HitBoxes.cs" />
     <Compile Include="Menu\Mods\Player\TagAll.cs" />
     <Compile Include="Menu\Mods\Player\TagAura.cs" />
     <Compile Include="Menu\Mods\ThisGuyIsUsingColossal!!!.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Patches\Make It Fucking Work\TotallyNotHookingGorillaTagger.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Asset\startup" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

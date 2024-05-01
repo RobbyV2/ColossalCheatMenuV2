@@ -20,7 +20,7 @@ namespace Colossal.Mods
         {
             if (PluginConfig.Timer)
             {
-                switch (Menu.Menu.MiscSettings[0].stringsliderind)
+                switch (PluginConfig.TimerSpeed)
                 {
                     case 0:
                         timespeed = 1.03f;
