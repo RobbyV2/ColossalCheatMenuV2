@@ -7,7 +7,7 @@ namespace Colossal.Patches
 {
     [HarmonyPatch(typeof(GorillaMouthFlap), "UpdateMouthFlapFlipbook")]
     [HarmonyPatch(typeof(GorillaMouthFlap), "CheckMouthflapChange")]
-    [HarmonyPatch(typeof(GorillaMouthFlap), "Update")]
+    [HarmonyPatch(typeof(GorillaMouthFlap), "InvokeUpdate")]
     internal class NoExpressions : MonoBehaviour
     {
         [HarmonyPrefix]

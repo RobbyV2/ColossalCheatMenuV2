@@ -23,9 +23,9 @@ namespace Colossal.Mods
                 {
                     GorillaLocomotion.Player.Instance.bodyCollider.attachedRigidbody.velocity = new Vector3(0f, 0.01f, 0f);
                 }
-                if (SteamVR_Actions.gorillaTag_LeftJoystickClick.GetState(SteamVR_Input_Sources.LeftHand))
+                if (SteamVR_Actions.gorillaTag_RightJoystickClick.GetState(SteamVR_Input_Sources.RightHand))
                 {
-                    GorillaLocomotion.Player.Instance.transform.position += GorillaLocomotion.Player.Instance.leftControllerTransform.forward * 0.45f;
+                    GorillaLocomotion.Player.Instance.transform.position += GorillaLocomotion.Player.Instance.rightControllerTransform.forward * 0.45f;
                     GorillaLocomotion.Player.Instance.bodyCollider.attachedRigidbody.velocity = Vector3.zero;
                     return;
                 }

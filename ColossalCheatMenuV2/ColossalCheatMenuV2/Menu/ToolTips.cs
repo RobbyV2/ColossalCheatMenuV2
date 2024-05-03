@@ -30,7 +30,7 @@ namespace Colossal.Menu
         public static string[] Movementtips = new string[]
         {
             $"<color={Menu.MenuColour}>Primary Buttons</color>\nFly Like IronMan",
-            $"<color={Menu.MenuColour}>L Secondary & L Joystick</color>\nFly in your hands direction",
+            $"<color={Menu.MenuColour}>L Secondary & R Joystick</color>\nFly in your right hands direction",
             $"<color={Menu.MenuColour}>R Grip</color>\nPoint palms towards walls to stick",
             $"<color={Menu.MenuColour}>Submenu</color>\nDisplays Speed Options",
             $"<color={Menu.MenuColour}>R Grip & L Grip</color>\nJump on air",

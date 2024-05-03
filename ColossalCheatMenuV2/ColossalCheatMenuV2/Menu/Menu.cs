@@ -321,7 +321,7 @@ namespace Colossal.Menu {
                     Settings = new MenuOption[7];
                     Settings[0] = new MenuOption { DisplayName = "Colour Settings", _type = "submenu", AssociatedString = "ColourSettings" };
                     Settings[1] = new MenuOption { DisplayName = "Mod Settings", _type = "submenu", AssociatedString = "ModSettings" };
-                    Settings[2] = new MenuOption { DisplayName = "MenuPosition", _type = "STRINGslider", StringArray = new string[] { "Top Right", "Middle" } };
+                    Settings[2] = new MenuOption { DisplayName = "MenuPosition", _type = "STRINGslider", StringArray = new string[] { "Top Right", "Top Left", "Middle" } };
                     Settings[3] = new MenuOption { DisplayName = "Config", _type = "STRINGslider", StringArray = Configs.GetConfigFileNames() };
                     Settings[4] = new MenuOption { DisplayName = "Load Config", _type = "button", AssociatedString = "loadconfig" };
                     Settings[5] = new MenuOption { DisplayName = "Save Config", _type = "button", AssociatedString = "saveconfig" };
@@ -844,7 +844,10 @@ namespace Colossal.Menu {
                             Testtext.rectTransform.localPosition = new Vector3(-2.4f, 1f, 2f);
                             break;
                         case 1:
-                            Testtext.rectTransform.localPosition = new Vector3(-0.8f, 0f, 1f);
+                            Testtext.rectTransform.localPosition = new Vector3(-2.4f, 1f, 0f);
+                            break;
+                        case 2:
+                            Testtext.rectTransform.localPosition = new Vector3(-0.8f, 0f, 0f);
                             break;
                     }
                 }
