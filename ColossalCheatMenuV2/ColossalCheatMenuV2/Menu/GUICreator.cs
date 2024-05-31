@@ -35,7 +35,7 @@ namespace ColossalCheatMenuV2.Menu
             MenuText.text = text;
             MenuText.fontSize = 10;
             MenuText.font = Plugin.gtagfont;
-            MenuText.rectTransform.sizeDelta = new Vector2(260, 160);
+            MenuText.rectTransform.sizeDelta = new Vector2(260, 180);
             MenuText.rectTransform.localScale = new Vector3(0.01f, 0.01f, 1f);
             MenuText.rectTransform.localPosition = loctrans;
             MenuText.material = mat;

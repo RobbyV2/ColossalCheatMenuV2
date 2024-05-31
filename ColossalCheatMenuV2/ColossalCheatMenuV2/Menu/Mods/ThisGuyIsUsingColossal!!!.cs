@@ -34,6 +34,8 @@ namespace Colossal.Menu
                     {
                         vrrig.playerText.color = Color.magenta;
                         vrrig.playerText.text = "[CCM] " + vrrig.Creator.NickName;
+                        if(PluginConfig.chams)
+                            vrrig.mainSkin.material.color = new Color(1.0f, 0.0f, 0.6666667f, 0.4f);
                     }
                     else
                     {

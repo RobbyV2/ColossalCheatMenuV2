@@ -43,7 +43,7 @@ namespace Colossal.Mods
                                         case 2:
                                             string currentroom = PhotonNetwork.CurrentRoom.Name;
                                              PhotonNetwork.Disconnect();
-                                             PhotonNetworkController.Instance.AttemptToJoinSpecificRoom(currentroom);
+                                             PhotonNetworkController.Instance.AttemptToJoinSpecificRoom(currentroom, JoinType.Solo);
                                             break;
                                         case 3:
                                             PhotonNetwork.Disconnect();

@@ -406,7 +406,7 @@ namespace Colossal.Menu
 
                                             prop.SetValue(null, newValue);
 
-                                            CustomConsole.LogToConsole($"\nIncremented {CurrentViewingMenu[SelectedOptionIndex].DisplayName} : {newValue}");
+                                            //CustomConsole.LogToConsole($"\nIncremented {CurrentViewingMenu[SelectedOptionIndex].DisplayName} : {newValue}");
                                         }
                                         else
                                         {
@@ -590,7 +590,7 @@ namespace Colossal.Menu
                 PlayerSettings[1].stringsliderind = PluginConfig.hitboxesradius;
 
 
-                string ToDraw = Plugin.sussy ? $"<color={MenuColour}>SUSSY : {MenuState}</color>\n" : $"<color={MenuColour}>COLOSSAL : {MenuState}</color>\n";
+                string ToDraw = Plugin.sussy ? $"<color={MenuColour}>SUSSY : {MenuState}</color>\n" : $"<color={MenuColour}>COLOSSAL.LOL : {MenuState}</color>\n";
                 int i = 0;
                 if (CurrentViewingMenu != null)
                 {
@@ -677,7 +677,7 @@ namespace Colossal.Menu
                         {
                             values[prop.Name] = prop.GetValue(null);
 
-                            Debug.Log(prop.Name);
+                            //Debug.Log(prop.Name);
 
                             if (values.ContainsKey(prop.Name))
                             {
@@ -746,15 +746,15 @@ namespace Colossal.Menu
                         }
                         if (option.AssociatedString == "join GTC")
                         {
-                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("GTC");
+                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("GTC", JoinType.Solo);
                         }
                         if (option.AssociatedString == "join TTT")
                         {
-                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("TTT");
+                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("TTT", JoinType.Solo);
                         }
                         if (option.AssociatedString == "join YTTV")
                         {
-                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("YTTV");
+                            PhotonNetworkController.Instance.AttemptToJoinSpecificRoom("YTTV", JoinType.Solo);
                         }
                         if (option.AssociatedString == "moddedcasual")
                         {

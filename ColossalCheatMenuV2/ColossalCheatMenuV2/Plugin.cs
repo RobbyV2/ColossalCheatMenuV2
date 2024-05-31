@@ -30,7 +30,7 @@ namespace Colossal
         public static GameObject holder;
         public static Font gtagfont;
 
-        public static float version = 5.8f;
+        public static float version = 5.9f;
 
         public static bool sussy = false;
         public static bool oculus = false;
@@ -73,7 +73,7 @@ namespace Colossal
 
                 Overlay.SpawnOverlay();
                 CustomConsole.LogToConsole("[COLOSSAL] Loaded overlay");
-
+                
                 Notifacations.SpawnNoti();
                 CustomConsole.LogToConsole("[COLOSSAL] Loaded noti");
             }
